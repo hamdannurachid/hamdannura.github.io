@@ -1,0 +1,586 @@
+body, html {
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+}
+
+#loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif) 50% no-repeat red;
+}
+
+@media (min-width: 992px) {
+  .login-container {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  background: rgb(235, 235, 235);
+  background: radial-gradient(circle, rgba(235, 235, 235, 0.0760679272) 0%, rgba(11, 11, 11, 0.7903536415) 0%);
+}
+#loader .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  font: 14px arial;
+}
+#loader .spinner-grow {
+  background: rgb(235, 235, 235);
+  background: radial-gradient(circle, rgb(235, 235, 235) 0%, rgb(255, 184, 0) 100%);
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+#myDiv {
+  display: none;
+}
+
+.section-left {
+  background: url("../images/bg-1.png") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.section-left .annoc {
+  display: flex;
+  /* establish flex container */
+  flex-direction: column;
+  /* make main axis vertical */
+  justify-content: center;
+  /* center items vertically, in this case */
+  align-items: center;
+  /* center items horizontally, in this case */
+  height: 100vh;
+  background: url(../images/box.png) center center no-repeat;
+  background-size: auto;
+}
+.section-left .annoc .box {
+  width: 450px;
+  height: 70%;
+  margin: 5px;
+  text-align: center;
+}
+.section-left .annoc .box h4 {
+  padding-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.section-right {
+  display: flex;
+  /* establish flex container */
+  flex-direction: column;
+  /* make main axis vertical */
+  justify-content: center;
+  /* center items vertically, in this case */
+  align-items: center;
+}
+.section-right .card {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.section-right img {
+  width: 70%;
+  max-width: 400px;
+  height: auto;
+  padding-bottom: 30px;
+}
+.section-right h4 {
+  color: #00035E;
+  font-size: 20px;
+  font-weight: bold;
+}
+.section-right a.btn-login {
+  background-color: #000478;
+  color: #ffffff;
+}
+.section-right a.btn-login:hover {
+  color: #ffffff;
+  background-color: #00035E;
+}
+.section-right a {
+  color: #707070;
+  font-size: small;
+  font-weight: bold;
+}
+.section-right a:hover {
+  text-decoration: underline;
+  color: #00035E;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.navbar .navbar-brand img {
+  width: 200px;
+}
+.navbar a {
+  color: #00035E !important;
+  font-size: 15px;
+}
+.navbar a:hover {
+  color: #4c4e8e !important;
+}
+.navbar .ava img {
+  width: 50px;
+}
+
+.section-top {
+  background-color: #00035E;
+  color: #ffffff;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+.section-top .menu {
+  height: 30px;
+}
+.section-top a {
+  color: #ffffff;
+  font-size: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.content {
+  background-color: #F9F8FD;
+  margin-top: 80px;
+  padding-bottom: 250px;
+  padding-top: 20px;
+}
+
+.navmenu .breadcrumb {
+  background-color: transparent !important;
+  font-size: 14px;
+}
+
+.informasi {
+  color: #ffffff;
+}
+.informasi h1 {
+  font-size: 24px;
+  font-weight: lighter;
+}
+.informasi p {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -8px !important;
+}
+.informasi h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.informasi .card {
+  height: 80px;
+  border-radius: 7px;
+}
+.informasi .prodi {
+  background: linear-gradient(#11ae95 0%, #8cc541 100%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.informasi .sks {
+  background: linear-gradient(#1bd6e3 0%, #37b9f4 100%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.informasi .ipk {
+  background: linear-gradient(#d47fcb 0%, #a78ed1 100%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.activity .activity-title {
+  height: 170px;
+  background: url(../images/pink.png) center center no-repeat;
+  border: none;
+  color: #ffffff;
+}
+.activity .activity-content {
+  height: 230px;
+}
+.activity .menuna {
+  margin-top: -60px;
+}
+.activity .menuna img {
+  width: 30px;
+}
+.activity .menuna a {
+  text-decoration: none;
+  color: #00035E;
+  font-size: 14px;
+  font-weight: bold;
+}
+.activity .menuna .card-body {
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.grafik .section-title {
+  height: 40px;
+  border: 0;
+}
+.grafik .section-title .grafik-image {
+  width: 25px;
+  margin: 0 auto;
+  float: left;
+}
+.grafik .section-title .grafik-title {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 14px;
+  font-weight: normal;
+}
+.time .section-title {
+  height: 40px;
+  border: 0;
+  border-radius: 5px 0px;
+  background: #14cf8f;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.time .section-title .time-image {
+  width: 20px;
+  margin: 0 auto;
+  float: left;
+}
+.time .section-title .time-title {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.time .section-content {
+  border-radius: 0px 0px 5px 5px;
+  background: #fff;
+}
+.time .section-content .table-time {
+  margin-bottom: 10px;
+  color: #00035E;
+}
+.time .section-content .table-time .desc-time {
+  font-weight: bold;
+}
+
+.studi .section-title {
+  height: 40px;
+  border: 0;
+}
+.studi .section-title .studi-image {
+  width: 25px;
+  margin: 0 auto;
+  float: left;
+}
+.studi .section-title .studi-title {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+.studi .section-content p {
+  color: #00035E;
+}
+.studi table {
+  font-size: 14px;
+}
+
+.img-printer {
+  width: 18px;
+}
+.img-printer:hover {
+  width: 20px;
+}
+
+.card {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border: 0px;
+}
+
+.khs .studi, .khs .dns {
+  min-height: 650px;
+}
+.khs .section-title {
+  background-color: #26B286;
+  color: #ffffff;
+}
+.khs .section-title .studi-title p {
+  font-weight: bold;
+}
+.khs h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.khs p {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.khs form, .khs select {
+  font-size: 14px;
+}
+.khs .features-image {
+  width: 45px;
+  float: left;
+}
+.khs .description {
+  float: left;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.dns .section-title {
+  background-color: #F99F04;
+  color: #ffffff;
+}
+.dns .section-title .dns-title p {
+  font-weight: bold;
+}
+.dns .table-identitas {
+  font-size: 14px;
+}
+.dns .table-dns {
+  font-size: 12px;
+}
+
+.row-ipk {
+  font-size: 14px;
+}
+.row-ipk h5 {
+  color: #00035E;
+  font-weight: bold;
+  font-size: 16px;
+}
+.row-ipk .pencapaian {
+  color: #ffffff;
+}
+.row-ipk .pencapaian h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.row-ipk .pencapaian p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.row-ipk .pencapaian h1 {
+  font-size: 28px;
+  text-align: right;
+}
+.row-ipk .pencapaian .jumlahsks {
+  background: linear-gradient(#d47fcb 0%, #a78ed1 100%);
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+}
+.row-ipk .pencapaian .angmut {
+  background: linear-gradient(#1bd6e3 0%, #37b9f4 100%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.row-ipk .pencapaian .ipks {
+  background: linear-gradient(#11ae95 0%, #8cc541 100%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.row-ipk .pencapaian .per-ip {
+  background: linear-gradient(#0affd8 0%, #6cc541 100%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.p-confirm {
+  font-size: 14px;
+}
+
+.btn-simpan {
+  background-color: #00035E;
+  width: 90px;
+}
+.btn-simpan:hover {
+  background-color: #0006B5;
+}
+
+.btn-batal {
+  background-color: #E4E4E4;
+  width: 70px;
+  color: #00035E;
+  border: #fff;
+}
+.btn-batal:hover {
+  background-color: #F6F6F6;
+  color: #909098;
+}
+
+.pengumuman {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.opsi-kelas .card {
+  border-radius: 10px;
+  background: #f8f8ff;
+  box-shadow: none;
+}
+.opsi-kelas h6 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.opsi-kelas label {
+  font-size: 14px;
+}
+
+.greeting {
+  color: #00035E;
+}
+.greeting .card-body {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+}
+.greeting h1 {
+  font-weight: bold;
+}
+
+.avatar .avatar-title {
+  min-height: 150px;
+  background-color: #E5E6FF;
+}
+.avatar .img-profile {
+  margin-top: -150px;
+}
+.avatar .img-profile img {
+  width: 200px;
+  height: 200px;
+}
+.avatar .descri {
+  padding-top: 30px;
+}
+.avatar .descri h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.avatar .descri h6 {
+  font-size: 14px;
+}
+.avatar .biodata .section-title {
+  background-color: #8B8FFF;
+  height: 40px;
+  color: #ffffff;
+  font-size: 14px;
+}
+.avatar .card-menu {
+  box-shadow: none;
+}
+.avatar ul > li > a {
+  color: #00035E;
+}
+.avatar .list-group-item.active {
+  background: none !important;
+  border-bottom: 5px solid #00035E !important;
+  color: #00035E;
+  font-weight: bold;
+}
+
+.kuri img {
+  width: 80px;
+  margin: auto;
+  left: 0;
+  margin-top: -50px;
+}
+.kuri .section-title {
+  background-color: #F99F04;
+}
+.kuri h4 {
+  font-size: 16px;
+  text-align: center;
+}
+.kuri .targeting h3 {
+  font-size: 24px;
+  font-size: #00035E;
+}
+.kuri .targeting p {
+  font-size: 14px;
+  font-size: #00035E;
+}
+
+.semester .vl {
+  border-left: 6px solid green;
+  height: 500px;
+}
+.semester p {
+  font-size: 16px;
+}
+.semester .badge {
+  background-color: #26b286;
+  font-size: 14px;
+  width: 120px;
+}
+.semester .kuriku {
+  color: #00035E;
+}
+.semester .kuriku .section-title {
+  background-color: #ffffff;
+  height: 50px;
+}
+.semester .kuriku .section-title p {
+  font-size: 14px;
+  font-weight: bold;
+}
+.semester .kuriku .section-content {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+footer .copy {
+  font-size: 12px;
+  text-align: center;
+  color: #00035E;
+}
+footer .infoo {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #00035E;
+}/*# sourceMappingURL=main.css.map */
